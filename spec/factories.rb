@@ -18,11 +18,10 @@ FactoryBot.define do
     closing_date { 3.days.from_now }
     paid_for_posting_until { 17.days.from_now }
     published_at { Date.today }
-    consultant
+    association :consultant, factory: :consultant_with_company
+    association :company, factory: :company
+    association :employer_company, factory: :company
+    association :last_updated_by, factory: :consultant_with_company
     organization_name { Faker::Company.name }
-
-    factory :job_employer_company do
-      association :employer_company, factory: :company
-    end
   end
 end
