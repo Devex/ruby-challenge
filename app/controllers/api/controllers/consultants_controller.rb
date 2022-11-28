@@ -7,7 +7,7 @@ module API
           ###
           desc 'Return all Consultants'
           get do
-            present Consultant.all
+            present Consultant.all, with: Entities::Consultant
           end
 
           route_param :id, type: Integer do
@@ -16,7 +16,8 @@ module API
             ###
             desc 'Return a specific Consultant'
             get do
-              present Consultant.find(params[:id])
+              consultant = Consultant.find(params[:id])
+              present consultant, with: Entities::Consultant
             end
           end
         end
