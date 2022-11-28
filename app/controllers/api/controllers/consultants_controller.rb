@@ -10,7 +10,7 @@ module API
             present Consultant.all
           end
 
-          route_param :id do
+          route_param :id, type: Integer do
             ###
             # GET '/api/consultants/:id'
             ###
