@@ -17,11 +17,7 @@
 #  last_login_at        :date
 #  last_profile_update  :date
 #  specialties          :text
-#  employment_status_id :integer
-#  career_level_id      :integer
-#  contract_length_id   :integer
 #  who_am_i             :text
-#  zip_code             :string
 #  created_at           :datetime         not null
 #  updated_at           :datetime         not null
 #

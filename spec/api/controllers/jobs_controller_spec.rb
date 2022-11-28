@@ -27,7 +27,6 @@ describe API::Controllers::JobsController, type: :request do
         :job,
         name: Faker::Job.title,
         description: 'A very cool job position',
-        organization_name: 'Great Company',
         workflow_state: 'published'
       )
     end
@@ -38,12 +37,9 @@ describe API::Controllers::JobsController, type: :request do
       expect(last_response).to be_successful
       expect(parsed_response['name']).to eq job.name
       expect(parsed_response['description']).to eq job.description
-      expect(parsed_response['organization_name']).to eq job.organization_name
       expect(parsed_response['workflow_state']).to eq job.workflow_state
       expect(parsed_response['company_id']).to eq job.company.id
-      expect(parsed_response['employer_company_id']).to eq job.employer_company.id
       expect(parsed_response['consultant_id']).to eq job.consultant.id
-      expect(parsed_response['last_updated_by_id']).to eq job.last_updated_by.id
     end
   end
 end
