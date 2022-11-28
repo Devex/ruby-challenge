@@ -38,8 +38,8 @@ describe API::Controllers::JobsController, type: :request do
       expect(parsed_response['name']).to eq job.name
       expect(parsed_response['description']).to eq job.description
       expect(parsed_response['workflow_state']).to eq job.workflow_state
-      expect(parsed_response['company_id']).to eq job.company.id
-      expect(parsed_response['consultant_id']).to eq job.consultant.id
+      expect(parsed_response['company']['id']).to eq job.company.id
+      expect(parsed_response['consultant']['id']).to eq job.consultant.id
     end
   end
 end

@@ -7,7 +7,7 @@ module API
           ###
           desc 'Return all Companies'
           get do
-            present Job.all
+            present Job.all, with: Entities::Job
           end
 
           route_param :id, type: Integer do
@@ -16,7 +16,8 @@ module API
             ###
             desc 'Return a specific consultant'
             get do
-              present Job.find(params[:id])
+              job = Job.find(params[:id])
+              present job, with: Entities::Job
             end
           end
         end
