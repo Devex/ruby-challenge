@@ -49,18 +49,14 @@ namespace :db do
     10.times do
       Job.create!(
         name: Faker::Job.title,
-        publish_status_id: 1,
         job_type: 1,
         closing_date: 1.year.from_now,
         description: 'A very cool job position',
-        organization_name: company_1.name,
         paid_for_posting_until: 1.year.from_now,
         published_at: 1.month.ago,
         workflow_state: 'published',
         company_id: company_1.id,
-        employer_company_id: company_1.id,
-        consultant_id: consultant_1.id,
-        last_updated_by_id: consultant_1.id
+        consultant_id: consultant_1.id
       )
     end
 
@@ -70,18 +66,14 @@ namespace :db do
     10.times do
       Job.create!(
         name: Faker::Job.title,
-        publish_status_id: 1,
         job_type: 1,
         closing_date: 1.year.from_now,
         description: 'A very cool job position',
-        organization_name: company_2.name,
         paid_for_posting_until: 1.day.ago,
         published_at: 1.month.ago,
         workflow_state: 'published',
         company_id: company_2.id,
-        employer_company_id: company_2.id,
-        consultant_id: consultant_2.id,
-        last_updated_by_id: consultant_2.id
+        consultant_id: consultant_2.id
       )
     end
 
