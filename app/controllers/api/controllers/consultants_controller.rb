@@ -2,19 +2,19 @@ module API
   module Controllers
     class ConsultantsController < Grape::API
         resource :consultants do
-          desc 'Return all Consultants'
           ###
           # GET '/api/consultants'
           ###
+          desc 'Return all Consultants'
           get do
             present Consultant.all
           end
 
-          desc 'Return a specific Consultant'
           route_param :id do
             ###
             # GET '/api/consultants/:id'
             ###
+            desc 'Return a specific Consultant'
             get do
               present Consultant.find(params[:id])
             end

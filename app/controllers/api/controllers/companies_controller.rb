@@ -2,19 +2,19 @@ module API
   module Controllers
     class CompaniesController < Grape::API
       resource :companies do
-        desc 'Return all Companies'
         ###
         # GET '/api/companies'
         ###
+        desc 'Return all Companies'
         get do
           present Company.all, with: Entities::Company
         end
 
-        desc 'Return a specific company'
         route_param :id do
           ###
           # GET '/api/companies/:id'
           ###
+          desc 'Return a specific company'
           get do
             company = Company.find(params[:id])
             present company, with: Entities::Company
