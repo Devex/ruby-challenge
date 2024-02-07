@@ -40,7 +40,7 @@ class CreateTables < ActiveRecord::Migration[7.0]
       t.text :description
       t.date :paid_for_posting_until
       t.date :published_at
-      t.boolean :salary_information_display, default: false, null: FALSE
+      t.boolean :salary_information_display, default: false, null: false
       t.integer :salary_range_bottom
       t.integer :salary_range_top
       t.string :workflow_state
