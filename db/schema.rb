@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_07_27_142336) do
+ActiveRecord::Schema[7.1].define(version: 2022_07_27_142336) do
   create_table "companies", force: :cascade do |t|
     t.string "name", null: false
     t.string "short_name"
@@ -67,4 +67,5 @@ ActiveRecord::Schema[7.0].define(version: 2022_07_27_142336) do
     t.index ["company_id"], name: "index_jobs_on_company_id"
     t.index ["consultant_id"], name: "index_jobs_on_consultant_id"
   end
+
 end
