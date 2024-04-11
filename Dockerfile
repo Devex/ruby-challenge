@@ -12,9 +12,7 @@ RUN bundle install
 
 COPY . .
 
-RUN bundle exec rake db:migrate db:test:prepare
-
-RUN bundle exec rake db:populate_sample_data
+RUN bundle exec rake db:setup
 
 EXPOSE 3000
 
