@@ -286,7 +286,7 @@ DEPENDENCIES
   grape
   grape-entity
   pry
-  puma (~> 6.0)
+  puma
   rack-test
   racksh
   rails (~> 7.0)
